@@ -103,6 +103,13 @@ module Google
         #     {::Google::Cloud::AIPlatform::V1::Endpoint#network network} or
         #     {::Google::Cloud::AIPlatform::V1::Endpoint#enable_private_service_connect enable_private_service_connect},
         #     can be set.
+        # @!attribute [rw] private_service_connect_config
+        #   @return [::Google::Cloud::AIPlatform::V1::PrivateServiceConnectConfig]
+        #     Optional. Configuration for private service connect.
+        #
+        #     {::Google::Cloud::AIPlatform::V1::Endpoint#network network} and
+        #     {::Google::Cloud::AIPlatform::V1::Endpoint#private_service_connect_config private_service_connect_config}
+        #     are mutually exclusive.
         # @!attribute [r] model_deployment_monitoring_job
         #   @return [::String]
         #     Output only. Resource name of the Model Monitoring job associated with this
@@ -197,6 +204,13 @@ module Google
         #     is not populated, all fields of the
         #     {::Google::Cloud::AIPlatform::V1::DeployedModel#explanation_spec explanation_spec}
         #     will be used for the explanation configuration.
+        # @!attribute [rw] disable_explanations
+        #   @return [::Boolean]
+        #     If true, deploy the model without explainable feature, regardless the
+        #     existence of
+        #     {::Google::Cloud::AIPlatform::V1::Model#explanation_spec Model.explanation_spec}
+        #     or
+        #     {::Google::Cloud::AIPlatform::V1::DeployedModel#explanation_spec explanation_spec}.
         # @!attribute [rw] service_account
         #   @return [::String]
         #     The service account that the DeployedModel's container runs as. Specify the

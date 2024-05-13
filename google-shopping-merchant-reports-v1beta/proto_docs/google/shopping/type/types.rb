@@ -20,14 +20,41 @@
 module Google
   module Shopping
     module Type
+      # The weight represented as the value in string and the unit.
+      # @!attribute [rw] amount_micros
+      #   @return [::Integer]
+      #     Required. The weight represented as a number in micros (1 million micros is
+      #     an equivalent to one's currency standard unit, for example, 1 kg = 1000000
+      #     micros).
+      #     This field can also be set as infinity by setting to -1.
+      #     This field only support -1 and positive value.
+      # @!attribute [rw] unit
+      #   @return [::Google::Shopping::Type::Weight::WeightUnit]
+      #     Required. The weight unit.
+      #     Acceptable values are: kg and lb
+      class Weight
+        include ::Google::Protobuf::MessageExts
+        extend ::Google::Protobuf::MessageExts::ClassMethods
+
+        # The weight unit.
+        module WeightUnit
+          # unit unspecified
+          WEIGHT_UNIT_UNSPECIFIED = 0
+
+          # lb unit.
+          POUND = 1
+
+          # kg unit.
+          KILOGRAM = 2
+        end
+      end
+
       # The price represented as a number and currency.
       # @!attribute [rw] amount_micros
       #   @return [::Integer]
       #     The price represented as a number in micros (1 million micros is an
       #     equivalent to one's currency standard unit, for example, 1 USD = 1000000
       #     micros).
-      #     This field can also be set as infinity by setting to -1.
-      #     This field only support -1 and positive value.
       # @!attribute [rw] currency_code
       #   @return [::String]
       #     The currency of the price using three-letter acronyms according to [ISO
@@ -95,7 +122,7 @@ module Google
       # Reporting contexts are groups of surfaces and formats for product results on
       # Google. They can represent the entire destination (for example, [Shopping
       # ads](https://support.google.com/merchants/answer/6149970)) or a subset of
-      # formats within a destination (for example, [Discovery
+      # formats within a destination (for example, [Demand Gen
       # ads](https://support.google.com/merchants/answer/13389785)).
       class ReportingContext
         include ::Google::Protobuf::MessageExts
@@ -109,9 +136,17 @@ module Google
           # [Shopping ads](https://support.google.com/merchants/answer/6149970).
           SHOPPING_ADS = 1
 
+          # Deprecated:  Use `DEMAND_GEN_ADS` instead.
           # [Discovery and Demand Gen
           # ads](https://support.google.com/merchants/answer/13389785).
           DISCOVERY_ADS = 2
+
+          # [Demand Gen ads](https://support.google.com/merchants/answer/13389785).
+          DEMAND_GEN_ADS = 13
+
+          # [Demand Gen ads on Discover
+          # surface](https://support.google.com/merchants/answer/13389785).
+          DEMAND_GEN_ADS_DISCOVER_SURFACE = 14
 
           # [Video ads](https://support.google.com/google-ads/answer/6340491).
           VIDEO_ADS = 3

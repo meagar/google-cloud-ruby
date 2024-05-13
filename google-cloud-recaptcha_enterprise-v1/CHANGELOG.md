@@ -1,5 +1,24 @@
 # Release History
 
+### 0.21.0 (2024-04-25)
+
+#### Features
+
+* Support for fraud prevention settings 
+
+### 0.20.1 (2024-04-17)
+
+#### Documentation
+
+* Fixes the description of ListFirewallPoliciesResponse ([#25683](https://github.com/googleapis/google-cloud-ruby/issues/25683)) 
+
+### 0.20.0 (2024-04-15)
+
+#### Features
+
+* add Cloudflare key creation support ([#25430](https://github.com/googleapis/google-cloud-ruby/issues/25430)) 
+* add IPV4/V6 field_info format to user_ip_address in Event 
+
 ### 0.19.0 (2024-03-22)
 
 #### Features

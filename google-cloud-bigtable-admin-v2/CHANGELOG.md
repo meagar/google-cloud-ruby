@@ -1,5 +1,17 @@
 # Release History
 
+### 0.26.0 (2024-04-19)
+
+#### Features
+
+* Support automated backup policy ([#25460](https://github.com/googleapis/google-cloud-ruby/issues/25460)) 
+
+### 0.25.0 (2024-04-15)
+
+#### Features
+
+* add Data Boost configurations to admin API ([#25421](https://github.com/googleapis/google-cloud-ruby/issues/25421)) 
+
 ### 0.24.0 (2024-03-10)
 
 #### Features

@@ -24,6 +24,7 @@ require "google/cloud/ai_platform/v1/featurestore_online_serving_service"
 require "google/cloud/ai_platform/v1/feature_online_store_service"
 require "google/cloud/ai_platform/v1/featurestore_service"
 require "google/cloud/ai_platform/v1/feature_registry_service"
+require "google/cloud/ai_platform/v1/gen_ai_tuning_service"
 require "google/cloud/ai_platform/v1/index_endpoint_service"
 require "google/cloud/ai_platform/v1/index_service"
 require "google/cloud/ai_platform/v1/job_service"
@@ -32,8 +33,10 @@ require "google/cloud/ai_platform/v1/llm_utility_service"
 require "google/cloud/ai_platform/v1/match_service"
 require "google/cloud/ai_platform/v1/metadata_service"
 require "google/cloud/ai_platform/v1/migration_service"
-require "google/cloud/ai_platform/v1/model_service"
 require "google/cloud/ai_platform/v1/model_garden_service"
+require "google/cloud/ai_platform/v1/model_service"
+require "google/cloud/ai_platform/v1/notebook_service"
+require "google/cloud/ai_platform/v1/persistent_resource_service"
 require "google/cloud/ai_platform/v1/pipeline_service"
 require "google/cloud/ai_platform/v1/schedule_service"
 require "google/cloud/ai_platform/v1/specialist_pool_service"
@@ -51,6 +54,11 @@ module Google
       #
       #     require "google/cloud/ai_platform/v1"
       #     client = ::Google::Cloud::AIPlatform::V1::DatasetService::Client.new
+      #
+      # @example Load this package, including all its services, and instantiate a REST client
+      #
+      #     require "google/cloud/ai_platform/v1"
+      #     client = ::Google::Cloud::AIPlatform::V1::DatasetService::Rest::Client.new
       #
       module V1
       end

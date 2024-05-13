@@ -1,5 +1,20 @@
 # Release History
 
+### 0.17.1 (2024-04-19)
+
+#### Documentation
+
+* Allow 14 week backup retention for Firestore daily backups ([#25468](https://github.com/googleapis/google-cloud-ruby/issues/25468)) 
+
+### 0.17.0 (2024-04-15)
+
+#### Features
+
+* add Vector Index API ([#25436](https://github.com/googleapis/google-cloud-ruby/issues/25436)) 
+#### Documentation
+
+* minor fixes 
+
 ### 0.16.0 (2024-03-18)
 
 #### Features
